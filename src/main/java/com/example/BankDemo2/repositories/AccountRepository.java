@@ -12,7 +12,9 @@ public interface AccountRepository extends CrudRepository<Account, String> {
 
 
 
-    List<Account> findByCustomer_UsernameAndCustomer_Password(String customer_username, String customer_password);
+    List<Account> findByCustomer_EmailAndCustomer_Password(String customer_email, String customer_password);
 
     Account findAccountByAccountNumber(Long accountNumber);
+
+    List<Account> findByCustomer_email(String email);
 }

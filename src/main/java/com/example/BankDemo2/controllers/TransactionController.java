@@ -11,7 +11,7 @@ import com.example.BankDemo2.models.Account;
 import java.time.LocalDate;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/transaction")
 public class TransactionController {

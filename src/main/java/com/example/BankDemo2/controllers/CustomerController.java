@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
@@ -24,5 +24,11 @@ public class CustomerController {
     public Optional<Customer> getCustomerByCustomerNumber(@PathVariable(value = "customer_number") Long customerNumber){
         return customerRepository.findById(customerNumber);
     }
+
+    @GetMapping("/customers/email/{email}")
+    public Customer getCustomerByEmail(@PathVariable(value = "email") String email){
+        return customerRepository.findByEmail(email);
+    }
+
 
 }

@@ -22,7 +22,7 @@ public class Customer implements Serializable {
     private String last_name;
     private String first_name;
     @Column(unique = true)
-    private String username;
+    private String email;
     private String password;
 
     @JsonIgnore
@@ -36,10 +36,10 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
-    public Customer(String last_name, String first_name, String username, String password) {
+    public Customer(String last_name, String first_name, String email, String password) {
         this.last_name = last_name;
         this.first_name = first_name;
-        this.username = username;
+        this.email = email;
         this.password = password;
     }
 
@@ -70,12 +70,12 @@ public class Customer implements Serializable {
         this.first_name = first_name;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String username) {
+        this.email = username;
     }
 
     public String getPassword() {

@@ -9,10 +9,11 @@ import com.example.BankDemo2.repositories.TransactionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class BankDemo2Application {
+public class BankDemo2Application extends SpringBootServletInitializer {
 
 
 	public static void main(String[] args) {
@@ -25,9 +26,9 @@ public class BankDemo2Application {
 		return args -> {
 
 			//create a new book
-			Customer customer = new Customer("Rudisel", "Devante", "D_Rudisel", ("rojo2010").replaceAll("\\s", ""));
-			Customer customer2 = new Customer("Rudisel", "Riley", "RileyCarter", ("Dad is the best").replaceAll("\\s", ""));
-			Customer customer3 = new Customer("Watkins", "Hannah", "RileyCarter", ("Dad is the best").replaceAll("\\s", ""));
+			Customer customer = new Customer("Rudisel", "Devante", "charlesrudisel@gmail.com", ("a").replaceAll("\\s", ""));
+			Customer customer2 = new Customer("Rudisel", "Riley", "rileyrudisel@gmail.com", ("a").replaceAll("\\s", ""));
+			Customer customer3 = new Customer("Watkins", "Hannah", "hannawatkins@gmail.com", ("a").replaceAll("\\s", ""));
 
 			// save the book
 			customerRepository.save(customer);
