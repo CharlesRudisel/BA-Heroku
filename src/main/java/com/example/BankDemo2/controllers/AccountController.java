@@ -20,6 +20,8 @@ import java.util.List;
 @RequestMapping("/account")
 public class AccountController {
 
+    public String woah = "this test worked";
+
     @Autowired
     AccountRepository accountRepository;
     @Autowired
@@ -27,6 +29,12 @@ public class AccountController {
 
     @GetMapping("/accounts")
     public List<Account> getAllAccounts() {return (List<Account>) accountRepository.findAll();}
+
+    @GetMapping("/accountz")
+    public String test() {
+
+        return (woah);
+    };
 
     @GetMapping("/accounts/{customer_number}")
     public List<Account> getCustomerByCustomerNumber(@PathVariable(value = "customer_number") Long customerNumber){
